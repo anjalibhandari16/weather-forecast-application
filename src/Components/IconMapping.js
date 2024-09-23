@@ -33,14 +33,10 @@ const allIcons = {
 }
 
 
-export function IconMapping({data}) {
-    console.log(data,'iskaa');
-    const icon_code = data.weather[0].icon;
-const default_url = `https://openweathermap.org/img/wn/${icon_code}@2x.png`;
+export function IconMapping(data) {
+    const default_url = `https://openweathermap.org/img/wn/${data}@2x.png`;
 
   return (
-    allIcons[icon_code] || default_url
+    allIcons[data] || default_url
   )
 }
-
-// export default IconMapping
